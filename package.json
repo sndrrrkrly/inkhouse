@@ -1,0 +1,14 @@
+{
+     "name": "inkhouse",
+     "private": true,
+     "workspaces": {
+          "packages": [
+               "pilaf",
+               "baklava"
+          ],
+          
+          "nohoist": [
+               "**"
+          ]
+     }
+}
