@@ -4,9 +4,9 @@
 </h1>
 
 <p align="left">
-	Frontend
+	Backend
 </p>
 
 <p align="left">
-	Next.js + TailwindCSS
+	Node.js + Express, MongoDB, webRTC, Socket.io
 </p>
