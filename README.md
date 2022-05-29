@@ -11,7 +11,7 @@
 	✨ Structure
 </h1>
 
-| Kódbázis             |        Leírás         |
+| Codebase             |        Description         |
 | :------------------- | :-------------------: |
 | [pilaf](pilaf)         |   Frontend          |
 | [baklava](baklava)     |   Backend           |
