@@ -1,22 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import Image from 'next/image';
 
 export const Room = () => {
      const [ isMuted, setMuted ] = useState(true);
-
-     /*
-
-     const handleManualLeave = () => {
-          return history.back()
-     };
-
-     const handleMuteClick = (clientId) => {
-          if (clientId !== user.id) { return; }
-     }; 
-     
-     */
 
      return (
           <>
