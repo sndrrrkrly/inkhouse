@@ -1,6 +1,20 @@
 import Image from 'next/image';
 
+import { useRouter } from 'next/router';
+
 export const Landing = () => {
+     const router = useRouter();
+
+     const handleSubmit = (e: any) => {
+          e.preventDefault();
+          console.log(e.target[0].value);
+     };
+
+     const createRoom = (e: any) => {
+          e.preventDefault();
+          router.push('/create-room');
+     };
+
      return (
           <>
                <div className = 'p-6 rounded-8 z-10 sm:w-600 w-400 bg-primary mt-6 mb-6 text-center'>
@@ -19,7 +33,7 @@ export const Landing = () => {
                          Kattints a lenti gombra szoba létrehozásáért.
                     </p>
 
-                    <button className = 'transition duration-500 ease-in-out p-2 bg-secondary hover:bg-blue-600 rounded-8 text-white text-xs'>
+                    <button onClick = { createRoom } className = 'transition duration-500 ease-in-out p-2 bg-secondary hover:bg-blue-600 rounded-8 text-white text-xs'>
                          Szoba létrehozása
                     </button>
 
@@ -32,13 +46,10 @@ export const Landing = () => {
                               Add meg a szoba azonosítóját és már is csatlakozhatsz!
                          </p>
 
-                         <form>
-                              <input type = 'id' className = 'p-2 text-xs text-gray-200 bg-washed rounded-8 mb-3' placeholder = 'Szoba azonosító' required />
+                         <form onSubmit = { handleSubmit }>
+                              <input type = 'id' placeholder = 'Szoba azonosító' required className = 'm-2 p-2 text-xs text-gray-200 bg-washed rounded-8 mb-3' />
+                              <input type = 'submit' value = 'Csatlakozás' className = 'transition duration-500 ease-in-out p-2 bg-secondary hover:bg-blue-600 rounded-8 text-white text-xs cursor-pointer' />
                          </form>
-
-                         <button onClick = {() => {}} className = 'transition duration-500 ease-in-out p-2 bg-secondary hover:bg-blue-600 rounded-8 text-white text-xs'>
-                              Csatlakozás
-                         </button>                           
                     </div>
 
                     <p className = 'font-normal text-gray-400 text-xs'>
